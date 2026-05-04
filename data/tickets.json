@@ -81,21 +81,6 @@
       "updatedAt": "2026-05-03T00:13:07.239Z"
     },
     {
-      "id": "6",
-      "title": "TICKET NOVO",
-      "description": "aaaaa",
-      "type": "bug",
-      "status": "done",
-      "priority": "low",
-      "owner": "fast",
-      "requester": "fast",
-      "tags": [
-        "back"
-      ],
-      "createdAt": "2026-05-03T00:14:44.382Z",
-      "updatedAt": "2026-05-03T18:26:12.155Z"
-    },
-    {
       "id": "7",
       "title": "Stock Inventory: impedir reserva acima do estoque",
       "description": "Na stock-inventory-app, a reserva de produto deve falhar quando a quantidade solicitada for maior que o estoque disponivel. Comece com teste em stock-inventory-app/src/features/catalog/catalog-service.js.",
