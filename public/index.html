@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gira</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">Workshop pipeline</p>
+          <h1>Gira</h1>
+          <p class="header-copy">
+            Fluxo operacional para demonstrar planejamento, implementação, revisão, skills e
+            integrações com MCP em um domínio simples.
+          </p>
+        </div>
+
+        <div class="flow-legend" aria-label="Etapas do pipeline">
+          <span>Entrada</span>
+          <span>Produção</span>
+          <span>Bloqueio</span>
+          <span>Entrega</span>
+        </div>
+      </header>
+
+      <section class="metrics-strip" aria-label="Indicadores do pipeline">
+        <div id="metrics-grid" class="metrics-grid"></div>
+      </section>
+
+      <section class="workspace-grid">
+        <div class="pipeline-workbench">
+          <div class="workbench-header">
+            <div>
+              <p class="eyebrow">Fluxo de trabalho</p>
+              <h2>Pipeline de tickets</h2>
+            </div>
+            <p id="results-count" class="muted-text">Carregando tickets...</p>
+          </div>
+
+          <form id="filters-form" class="filters-form">
+            <label>
+              <span>Busca</span>
+              <input name="query" type="search" placeholder="Título, tag, pessoa ou descrição" />
+            </label>
+
+            <label>
+              <span>Status</span>
+              <select name="status">
+                <option value="">Todos</option>
+                <option value="todo">Entrada</option>
+                <option value="in_progress">Em produção</option>
+                <option value="blocked">Bloqueio</option>
+                <option value="done">Entrega</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Prioridade</span>
+              <select name="priority">
+                <option value="">Todas</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                <option value="critical">Critical</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Tipo</span>
+              <select name="type">
+                <option value="">Todos</option>
+                <option value="bug">Bug</option>
+                <option value="feature">Feature</option>
+                <option value="task">Task</option>
+                <option value="incident">Incident</option>
+              </select>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit">Aplicar filtros</button>
+              <button type="button" id="clear-filters-button" class="ghost-button">
+                Limpar
+              </button>
+            </div>
+          </form>
+
+          <div id="ticket-list" class="pipeline-board" aria-live="polite"></div>
+        </div>
+
+        <aside class="intake-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Entrada</p>
+              <h2>Novo card</h2>
+            </div>
+            <p class="muted-text">Crie uma demanda e acompanhe a passagem pelo fluxo.</p>
+          </div>
+
+          <form id="create-ticket-form" class="create-ticket-form">
+            <label>
+              <span>Título</span>
+              <input name="title" maxlength="120" required />
+            </label>
+
+            <label>
+              <span>Descrição</span>
+              <textarea name="description" maxlength="280" rows="4"></textarea>
+            </label>
+
+            <label>
+              <span>Tipo</span>
+              <select name="type" required>
+                <option value="feature">Feature</option>
+                <option value="bug">Bug</option>
+                <option value="task">Task</option>
+                <option value="incident">Incident</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Prioridade</span>
+              <select name="priority" required>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+                <option value="high">High</option>
+                <option value="critical">Critical</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Responsável</span>
+              <input name="owner" required />
+            </label>
+
+            <label>
+              <span>Solicitante</span>
+              <input name="requester" required />
+            </label>
+
+            <label>
+              <span>Tags</span>
+              <input name="tags" placeholder="frontend, docs, api" />
+            </label>
+
+            <button type="submit">Criar ticket</button>
+          </form>
+
+          <p id="feedback-message" class="feedback-message" aria-live="polite"></p>
+        </aside>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

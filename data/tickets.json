@@ -1,0 +1,165 @@
+{
+  "nextId": 11,
+  "tickets": [
+    {
+      "id": "1",
+      "title": "Corrigir erro de timeout no webhook",
+      "description": "Chamadas longas estão deixando o fluxo de confirmação instável no horário de pico.",
+      "type": "incident",
+      "status": "todo",
+      "priority": "critical",
+      "owner": "Camila",
+      "requester": "Time de Operações",
+      "tags": [
+        "api",
+        "webhook"
+      ],
+      "createdAt": "2026-04-27T09:00:00.000Z",
+      "updatedAt": "2026-05-03T00:12:51.841Z"
+    },
+    {
+      "id": "2",
+      "title": "Adicionar filtro por prioridade na lista",
+      "description": "A equipe quer separar rapidamente tickets urgentes durante a daily.",
+      "type": "feature",
+      "status": "done",
+      "priority": "medium",
+      "owner": "Rafael",
+      "requester": "Produto",
+      "tags": [
+        "frontend",
+        "ux"
+      ],
+      "createdAt": "2026-04-28T08:30:00.000Z",
+      "updatedAt": "2026-05-03T00:13:03.407Z"
+    },
+    {
+      "id": "3",
+      "title": "Criar teste de regressão para tickets bloqueados",
+      "description": "Precisamos garantir que o card mostre ações válidas quando um ticket está bloqueado.",
+      "type": "task",
+      "status": "done",
+      "priority": "high",
+      "owner": "Aline",
+      "requester": "Tech Lead",
+      "tags": [
+        "test",
+        "frontend"
+      ],
+      "createdAt": "2026-04-28T10:15:00.000Z",
+      "updatedAt": "2026-05-03T00:13:04.780Z"
+    },
+    {
+      "id": "4",
+      "title": "Documentar fluxo de criação de tickets",
+      "description": "O time do workshop quer um passo a passo simples para novos participantes.",
+      "type": "task",
+      "status": "done",
+      "priority": "low",
+      "owner": "Beatriz",
+      "requester": "Enablement",
+      "tags": [
+        "docs"
+      ],
+      "createdAt": "2026-04-26T15:00:00.000Z",
+      "updatedAt": "2026-04-27T17:20:00.000Z"
+    },
+    {
+      "id": "5",
+      "title": "Melhorar mensagem de erro do endpoint de criação",
+      "description": "A resposta atual não ajuda quando faltam campos obrigatórios no formulário.",
+      "type": "bug",
+      "status": "done",
+      "priority": "high",
+      "owner": "Igor",
+      "requester": "QA",
+      "tags": [
+        "backend",
+        "validation"
+      ],
+      "createdAt": "2026-04-28T11:00:00.000Z",
+      "updatedAt": "2026-05-03T00:13:07.239Z"
+    },
+    {
+      "id": "6",
+      "title": "TICKET NOVO",
+      "description": "aaaaa",
+      "type": "bug",
+      "status": "done",
+      "priority": "low",
+      "owner": "fast",
+      "requester": "fast",
+      "tags": [
+        "back"
+      ],
+      "createdAt": "2026-05-03T00:14:44.382Z",
+      "updatedAt": "2026-05-03T18:26:12.155Z"
+    },
+    {
+      "id": "7",
+      "title": "Stock Inventory: impedir reserva acima do estoque",
+      "description": "Na stock-inventory-app, a reserva de produto deve falhar quando a quantidade solicitada for maior que o estoque disponivel. Comece com teste em stock-inventory-app/src/features/catalog/catalog-service.js.",
+      "type": "bug",
+      "status": "todo",
+      "priority": "critical",
+      "owner": "Participante",
+      "requester": "Workshop",
+      "tags": [
+        "stock-inventory",
+        "backend",
+        "tdd"
+      ],
+      "createdAt": "2026-05-03T09:00:00.000Z",
+      "updatedAt": "2026-05-03T19:11:48.000Z"
+    },
+    {
+      "id": "8",
+      "title": "Stock Inventory: adicionar filtro por categoria",
+      "description": "Adicionar filtro de categoria no endpoint GET /api/products e refletir o controle no frontend da stock-inventory-app. A busca por texto deve continuar funcionando junto com o novo filtro.",
+      "type": "feature",
+      "status": "todo",
+      "priority": "high",
+      "owner": "Participante",
+      "requester": "Produto",
+      "tags": [
+        "stock-inventory",
+        "frontend",
+        "backend"
+      ],
+      "createdAt": "2026-05-03T09:05:00.000Z",
+      "updatedAt": "2026-05-03T19:11:48.000Z"
+    },
+    {
+      "id": "9",
+      "title": "Stock Inventory: mostrar historico de reservas recentes",
+      "description": "Exibir na interface da stock-inventory-app as reservas mais recentes com produto, quantidade, solicitante e horario. Se precisar, crie um endpoint de leitura simples.",
+      "type": "feature",
+      "status": "todo",
+      "priority": "medium",
+      "owner": "Participante",
+      "requester": "Enablement",
+      "tags": [
+        "stock-inventory",
+        "frontend",
+        "api"
+      ],
+      "createdAt": "2026-05-03T09:10:00.000Z",
+      "updatedAt": "2026-05-03T19:11:48.000Z"
+    },
+    {
+      "id": "10",
+      "title": "Stock Negativo",
+      "description": "no stock inventory, está sendo possível reservar um item mesmo quando o estoque está zerado",
+      "type": "bug",
+      "status": "todo",
+      "priority": "critical",
+      "owner": "Matheus",
+      "requester": "Matheus",
+      "tags": [
+        "backend"
+      ],
+      "createdAt": "2026-05-03T20:31:29.586Z",
+      "updatedAt": "2026-05-03T20:31:29.586Z"
+    }
+  ]
+}
